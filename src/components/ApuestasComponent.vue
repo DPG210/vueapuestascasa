@@ -20,6 +20,7 @@
             </tr>
         </tbody>
     </table>
+    <button @click="crearApuesta()">Crear Apuesta</button>
   </div>
 </template>
 
@@ -34,12 +35,15 @@ export default {
         }
     },
     methods:{
-        eliminarApuestas(id){
+        eliminarApuesta(id){
             service.deleteApuesta(id).then(()=>{
                 service.getApuestas().then((result)=>{
                 this.apuestas=result
         })
             })
+        },
+        crearApuesta(){
+            this.$router.push("/crearapuesta");
         }
     },
     mounted(){

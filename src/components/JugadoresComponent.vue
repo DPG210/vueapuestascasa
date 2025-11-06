@@ -14,7 +14,7 @@
                 <td>{{jugador.nombre}}</td>
                 <td>{{jugador.posicion}}</td>
                 <td>
-                    <img :src="jugador.imagen" alt="">
+                    <img :src="jugador.imagen" alt="" style="width:100px; height:100px">
                 </td>
                 <td>
                     <router-link :to="'/jugador/'+jugador.idJugador" class="btn btn-info">Detalles</router-link>

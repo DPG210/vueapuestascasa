@@ -49,7 +49,7 @@ export default class ServiceApuestas{
     }
     insertApuesta(apuesta){
         return new Promise (function(resolve){
-            var request="api/jugadores";
+            var request="api/apuestas";
 
             axios.post(Global.urlApuestas+request,apuesta).then(response=>{
                 resolve(response)
